@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAN HAO // Operational Consultancy — "Math is Math" for Philippine MSMEs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- White background with greenish-bluish slanting square that blurs on the sides -->
+  <div class="bg-stage" aria-hidden="true">
+    <div class="slanting-square-wrap" id="bgSquareWrap">
+      <div class="slanting-square-glow"></div>
+      <div class="slanting-square-core"></div>
+      <div class="slanting-square-grid"></div>
+    </div>
+    <div class="side-blur side-blur-left"></div>
+    <div class="side-blur side-blur-right"></div>
+  </div>
+
+  <!-- Sticky Top Header: [ TAN ] [ HAO ] stays fixed & enlarges on scroll while header info/contacts blur into oblivion -->
+  <header class="sticky-top-header" id="stickyHeader" aria-label="Tan Hao Brand & Contact Header">
+    <div class="header-inner">
+      <!-- Persistent Website Logo: [ TAN ] [ HAO ] -->
+      <div class="slanted-banner" id="brandBanner" title="Click to verify Tanhao signature">
+        <div class="skew-plate plate-tan" data-glitch="TAN">
+          <span class="plate-text">TAN</span>
+          <span class="plate-underline"></span>
+        </div>
+        <div class="skew-plate plate-hao" data-glitch="HAO">
+          <span class="plate-text">HAO</span>
+          <span class="plate-underline"></span>
+        </div>
+      </div>
+
+      <!-- Collapsing Header Content (Blurs to oblivion when scrolling down) -->
+      <div class="header-collapsible" id="headerCollapsible">
+        <div class="brand-subtag">
+          <span class="tag-bracket">[</span>
+          OPERATIONAL &amp; INTELLIGENCE CONSULTANCY // PH MSMEs
+          <span class="tag-bracket">]</span>
+        </div>
+
+        <!-- Useful Contact Information Bar (Replaces old coordinate/clock telemetry) -->
+        <div class="header-contacts" aria-label="Contact Information">
+          <a href="mailto:ops@tanhao.ph" class="contact-pill" title="Email Tanhao Operational Consultancy">
+            <span class="contact-label">EMAIL //</span> ops@tanhao.ph
+          </a>
+          <a href="tel:+639178826426" class="contact-pill" title="Call or Viber">
+            <span class="contact-label">VIBER / TEL //</span> +63 917 882 6426
+          </a>
+          <span class="contact-pill location-pill">
+            <i class="pulse-dot"></i> METRO MANILA &amp; NATIONWIDE PH
+          </span>
+          <button class="contact-cta-btn" id="headerBookBtn">BOOK BRIEFING</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="cyber-shell">
+    <!-- Middle 2-Column Layout: Left (Info Stack) + Right (Logo Showcase) -->
+    <section class="upper-grid">
+      <!-- LEFT COLUMN: INFO -->
+      <div class="col-info">
+        <div class="section-label label-cyan">
+          <span class="label-hash">//</span> Info
+        </div>
+
+        <!-- Top Info Card with Lime Window Bar & Interactive 'X' button -->
+        <article class="cyber-card info-primary" id="infoPrimaryCard">
+          <div class="window-bar">
+            <button class="win-close-btn" id="infoCloseBtn" title="Cycle Briefing Tabs" aria-label="Cycle Briefing Tabs">
+              <span class="x-icon">✕</span>
+            </button>
+            <div class="win-title" id="infoWinTitle">01_ORIGIN_AND_MISSION.EXE</div>
+            <div class="win-status-pills" role="tablist">
+              <span class="pill active" data-tab="origin" role="tab">01 ORIGIN</span>
+              <span class="pill" data-tab="philosophy" role="tab">02 AXIOM</span>
+              <span class="pill" data-tab="pricing" role="tab">03 PRICING</span>
+            </div>
+          </div>
+
+          <div class="card-body" id="infoPrimaryBody">
+            <!-- TAB 01: Origin & MSME Focus -->
+            <div class="tab-view active" id="view-origin">
+              <p class="cyber-kicker">FOUNDED BY TWO CS STUDENTS IN THE PHILIPPINES</p>
+              <h2 class="info-headline">Operational Intelligence for Local MSMEs.</h2>
+              <p class="info-copy">
+                Micro, small, and medium enterprises routinely battle messy record-keeping, inventory blindspots, and gut-feel budgeting. Rooted in hands-on family business logistics, inventory, software, and marketing, <strong>Tanhao</strong> bridges the gap between chaotic paper logs and overpriced corporate BI firms.
+              </p>
+              <div class="interactive-tags">
+                <button class="cyber-chip" data-inspect="math">∑ "Math is Math"</button>
+                <button class="cyber-chip" data-inspect="gold">◈ Gold In, Gold Out</button>
+                <button class="cyber-chip" data-inspect="nopos">⛨ Zero-Bloat (No Risky POS)</button>
+              </div>
+            </div>
+
+            <!-- TAB 02: Core Philosophy ("Math is Math") -->
+            <div class="tab-view" id="view-philosophy">
+              <p class="cyber-kicker">CORE BELIEF // OBJECTIVE DECISION SUPPORT</p>
+              <h2 class="info-headline">"Math is Math." Numbers Don’t Lie.</h2>
+              <p class="info-copy">
+                We treat mathematical models and clean data as practical tools to uncover operational reality, diagnose hidden financial leaks, and equip business owners with trust-based decision support—without forcing expensive, fragile from-scratch software builds.
+              </p>
+              <div class="metric-row">
+                <div class="metric-head"><span>PAPER RECEIPTS &amp; TALLIES → STRUCTURED LEDGER</span><strong>100% VERIFIED</strong></div>
+                <div class="metric-bar"><div class="metric-fill" style="width: 100%"></div></div>
+              </div>
+              <div class="metric-row">
+                <div class="metric-head"><span>CASH RUNWAY &amp; INVENTORY FORECAST HORIZON</span><strong>30–60 DAYS</strong></div>
+                <div class="metric-bar"><div class="metric-fill" style="width: 86%"></div></div>
+              </div>
+            </div>
+
+            <!-- TAB 03: Transparent Retainer & Pilot Pricing -->
+            <div class="tab-view" id="view-pricing">
+              <p class="cyber-kicker">TRANSPARENT PHILIPPINE MSME PRICING</p>
+              <div class="pricing-mini-grid">
+                <div class="price-box highlight-pilot">
+                  <span class="price-tag-badge">50% OFF INTRO PILOT</span>
+                  <h4>30-Day "Ops Baseline"</h4>
+                  <div class="price-amount">₱4,500 <small>/ first 30 days</small></div>
+                  <p>Low-friction mobile intake, weekly cross-verification, Dedicated Handler &amp; Month-1 Diagnostic Briefing.</p>
+                </div>
+                <div class="price-box">
+                  <span class="price-tag-badge badge-cyan">FLAGSHIP RETAINER</span>
+                  <h4>OpsPulse Advisory</h4>
+                  <div class="price-amount">₱9,000 <small>/ month</small></div>
+                  <p>Benchmark ₱7.5k–₱12k (single site) + Multi-branch tier. Ledger digitization, 30–60d forecasts &amp; strategy sessions.</p>
+                </div>
+              </div>
+              <button class="action-trigger" id="pingDiagnosticBtn">VIEW FULL PLANS &amp; PAYMENT METHODS ↓</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bottom Info Box (Fixed spacing, clean alignment, zero clipping) -->
+        <article class="cyber-card info-secondary" id="infoSecondaryCard">
+          <div class="secondary-header">
+            <span class="sec-tag">OPS_BASELINE // 30-DAY PILOT TELEMETRY</span>
+            <div class="phase-Quick-pills">
+              <button class="mini-clear-btn active-phase" data-phase="1">PHASE 1</button>
+              <button class="mini-clear-btn" data-phase="2">PHASE 2</button>
+              <button class="mini-clear-btn" data-phase="3">PHASE 3</button>
+            </div>
+          </div>
+          <div class="terminal-readout" id="terminalReadout">
+            <div class="log-line">
+              <span class="log-ts">[P1]</span>
+              <span class="log-ok">INTAKE</span>
+              <span id="phaseTitleText">Landscape Study &amp; Mobile Digital Intake</span>
+            </div>
+            <div class="log-line">
+              <span class="log-ts">[OP]</span>
+              <span class="log-cyan">DETAIL</span>
+              <span id="phaseDetailText">Mapping direct costs &amp; workflows; deploying "gold in, gold out" daily capture.</span>
+            </div>
+            <div class="log-line active-line">
+              <span class="log-ts">[&gt;&gt;]</span>
+              <span id="dynamicLogText">Click any phase, chip, or neural node to inspect...</span>
+            </div>
+          </div>
+          <div class="quick-stats-footer">
+            <div class="stat-cell">
+              <small>FOUNDATION PILOT</small>
+              <strong id="statEfficiency">₱4,500 (50% OFF)</strong>
+            </div>
+            <div class="stat-cell">
+              <small>OPSPULSE STD</small>
+              <strong id="statLoad">₱9,000 / MO</strong>
+            </div>
+            <div class="stat-cell">
+              <small>FORECAST WINDOW</small>
+              <strong id="statNodes">30–60 DAYS</strong>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT COLUMN: LOGO -->
+      <div class="col-logo">
+        <div class="section-label label-cyan">
+          <span class="label-hash">//</span> Logo
+        </div>
+
+        <div class="logo-stage" id="logoStage" tabindex="0" role="button" aria-label="Interactive Two-Hemisphere Brain Logo symbolizing Data and Operational Strategy.">
+          <!-- Corner HUD brackets -->
+          <span class="corner c-tl"></span>
+          <span class="corner c-tr"></span>
+          <span class="corner c-bl"></span>
+          <span class="corner c-br"></span>
+
+          <div class="logo-hud-top">
+            <span>DUAL_HEMISPHERE // DATA × STRATEGY</span>
+            <span class="logo-mode-badge" id="logoModeBadge">MATH IS MATH</span>
+          </div>
+
+          <!-- Interactive SVG matching the hand-drawn dual-lobe cyan/lime emblem in the reference -->
+          <div class="logo-canvas-wrap" id="logoTiltWrap">
+            <svg class="cyber-emblem-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <filter id="limeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <linearGradient id="centerSpineGrad" x1="195" y1="65" x2="210" y2="295" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#a3e635" />
+                  <stop offset="50%" stop-color="#22d3ee" />
+                  <stop offset="100%" stop-color="#84cc16" />
+                </linearGradient>
+              </defs>
+
+              <!-- Subtle background radar rings -->
+              <circle cx="200" cy="180" r="128" class="radar-ring ring-outer" />
+              <circle cx="200" cy="180" r="92" class="radar-ring ring-inner" />
+
+              <!-- Synaptic cross-links -->
+              <g class="synapse-links">
+                <line x1="135" y1="115" x2="196" y2="125" class="synapse-line cyan" />
+                <line x1="120" y1="175" x2="199" y2="178" class="synapse-line cyan" />
+                <line x1="138" y1="240" x2="202" y2="230" class="synapse-line cyan" />
+                <line x1="262" y1="118" x2="197" y2="132" class="synapse-line lime" />
+                <line x1="276" y1="182" x2="200" y2="182" class="synapse-line lime" />
+                <line x1="255" y1="242" x2="203" y2="235" class="synapse-line lime" />
+              </g>
+
+              <!-- LEFT HEMISPHERE (Cyan wavy contour: Mathematical Models & Clean Data) -->
+              <path
+                id="leftLobePath"
+                class="lobe-path lobe-cyan"
+                filter="url(#cyanGlow)"
+                d="M 184 82
+                   C 152 72, 126 88, 132 114
+                   C 114 126, 112 152, 128 168
+                   C 104 184, 106 218, 134 232
+                   C 128 258, 144 284, 186 282"
+              />
+
+              <!-- Inner circuit trace Left -->
+              <path
+                class="inner-trace cyan-trace"
+                d="M 176 106 C 152 106, 146 128, 156 144 C 138 158, 138 190, 158 202 C 146 222, 154 252, 180 256"
+              />
+
+              <!-- CENTER DIVIDER SPINE (Slanted lime-yellow axis from reference) -->
+              <line
+                x1="192"
+                y1="74"
+                x2="206"
+                y2="286"
+                class="center-axis-line"
+                stroke="url(#centerSpineGrad)"
+                filter="url(#limeGlow)"
+              />
+
+              <!-- RIGHT HEMISPHERE (Lime-green wavy contour: Operational Strategy & MSME Action) -->
+              <path
+                id="rightLobePath"
+                class="lobe-path lobe-lime"
+                filter="url(#limeGlow)"
+                d="M 196 76
+                   C 228 64, 258 84, 256 112
+                   C 280 126, 284 158, 268 180
+                   C 286 202, 276 234, 254 248
+                   C 246 268, 226 282, 214 286"
+              />
+
+              <!-- Inner circuit trace Right -->
+              <path
+                class="inner-trace lime-trace"
+                d="M 208 102 C 236 98, 248 124, 238 146 C 258 164, 256 196, 238 212 C 246 232, 234 254, 218 262"
+              />
+
+              <!-- Interactive Neural Nodes mapped to Tanhao's Data & Strategy Pillars -->
+              <g class="neural-nodes">
+                <circle cx="132" cy="114" r="5" class="node-dot cyan-dot" data-node="PAPER_LOGS_TO_LEDGER" />
+                <circle cx="128" cy="168" r="5" class="node-dot cyan-dot" data-node="GOLD_IN_GOLD_OUT_AUDIT" />
+                <circle cx="134" cy="232" r="5" class="node-dot cyan-dot" data-node="RUNWAY_MODEL_30_60D" />
+                <circle cx="256" cy="112" r="5" class="node-dot lime-dot" data-node="FINANCIAL_LEAK_DETECTION" />
+                <circle cx="268" cy="180" r="5" class="node-dot lime-dot" data-node="INVENTORY_VELOCITY_SYNC" />
+                <circle cx="254" cy="248" r="5" class="node-dot lime-dot" data-node="MONTHLY_STRATEGY_BRIEFING" />
+                <circle cx="199" cy="180" r="7" class="node-dot bridge-dot" data-node="MATH_IS_MATH_NEXUS" />
+              </g>
+            </svg>
+          </div>
+
+          <div class="logo-hud-bottom">
+            <div class="hemisphere-legend">
+              <span class="leg-item"><i class="dot-cyan"></i> DATA &amp; MATH MODELS</span>
+              <span class="leg-item"><i class="dot-lime"></i> OPERATIONAL STRATEGY</span>
+            </div>
+            <button class="surge-btn" id="surgeBtn">⚡ SYNC OPSPULSE CORE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Full-Width Section: SERVICES & PLANS -->
+    <section class="services-section" id="servicesSection" aria-label="Services and Plans">
+      <div class="services-frame">
+        <div class="services-header">
+          <div class="services-title-group">
+            <h2 class="services-title" id="bottomSectionTitle">services</h2>
+          </div>
+          <!-- Exactly 2 Buttons: Services Button, and Plans Button -->
+          <div class="services-filter" role="tablist" aria-label="Switch between Services and Plans">
+            <button class="filter-btn active" id="btnShowServices" data-mode="services" role="tab" aria-selected="true">Services</button>
+            <button class="filter-btn" id="btnShowPlans" data-mode="plans" role="tab" aria-selected="false">Plans</button>
+          </div>
+        </div>
+
+        <!-- VIEW 1: THE 3 CORE SERVICES -->
+        <div class="services-grid three-col-grid" id="servicesViewGrid">
+          <!-- 1.) Operational Intelligence -->
+          <article class="service-card active-service" data-service-id="oi">
+            <div class="srv-top">
+              <span class="srv-index">SERVICE // 01</span>
+              <span class="srv-badge">FLAGSHIP CORE</span>
+            </div>
+            <h3 class="srv-name">1.) Operational Intelligence</h3>
+            <p class="srv-desc">
+              Our core offering structured across three operational pillars:
+            </p>
+            <ul class="srv-bullet-list">
+              <li><strong>Structured Data Ledger:</strong> Digitizing messy paper logs, daily cash tallies, and physical receipts ("gold in, gold out").</li>
+              <li><strong>Visual Dashboards &amp; 30–60d Forecasting:</strong> Mathematical models tracking cash runway, direct costs, and inventory velocity.</li>
+              <li><strong>Monthly Strategy Briefings:</strong> Actionable advisory sessions diagnosing financial leaks and guiding objective owner decisions.</li>
+            </ul>
+            <div class="srv-interactive-bar">
+              <span class="srv-metric">PACKAGED AS: <strong>OPSPULSE</strong></span>
+              <button class="srv-deploy-btn" data-switch-plan="OPSPULSE-PILOT">VIEW PLANS →</button>
+            </div>
+          </article>
+
+          <!-- 2.) Software Development and Maintenance -->
+          <article class="service-card" data-service-id="software">
+            <div class="srv-top">
+              <span class="srv-index">SERVICE // 02</span>
+              <span class="srv-badge badge-lime">SELECTIVE TECH</span>
+            </div>
+            <h3 class="srv-name">2.) Software Development and Maintenance</h3>
+            <p class="srv-desc">
+              Practical software integrations and continuous system maintenance designed for real MSME workflows—without risky, expensive from-scratch custom POS builds.
+            </p>
+            <ul class="srv-bullet-list">
+              <li><strong>Mobile-First Digital Intake:</strong> Low-friction daily data capture tools tailored for frontline staff.</li>
+              <li><strong>Workflow &amp; Ledger Integrations:</strong> Connecting spreadsheets, accounting pipelines, and inventory trackers cleanly.</li>
+              <li><strong>Ongoing Maintenance &amp; Tuning:</strong> Ensuring your digital tools stay reliable, accurate, and zero-bloat.</li>
+            </ul>
+            <div class="srv-interactive-bar">
+              <span class="srv-metric">APPROACH: <strong>ZERO-BLOAT</strong></span>
+              <button class="srv-deploy-btn" data-deploy="Software Development and Maintenance">INQUIRE MODULE →</button>
+            </div>
+          </article>
+
+          <!-- 3.) Marketing -->
+          <article class="service-card" data-service-id="marketing">
+            <div class="srv-top">
+              <span class="srv-index">SERVICE // 03</span>
+              <span class="srv-badge">DATA-DRIVEN</span>
+            </div>
+            <h3 class="srv-name">3.) Marketing</h3>
+            <p class="srv-desc">
+              Selective, math-backed MSME marketing anchored in real unit economics and inventory velocity—so every peso spent on growth is tied to verified margins.
+            </p>
+            <ul class="srv-bullet-list">
+              <li><strong>Margin-Aware Campaigns:</strong> Pushing products and services with proven profitability and stock readiness.</li>
+              <li><strong>Customer &amp; Sales Telemetry:</strong> Tracking campaign ROI directly inside your operational dashboards.</li>
+              <li><strong>Local MSME Positioning:</strong> Practical digital presence and conversion funnels built for Philippine buyers.</li>
+            </ul>
+            <div class="srv-interactive-bar">
+              <span class="srv-metric">AXIOM: <strong>ROI VERIFIED</strong></span>
+              <button class="srv-deploy-btn" data-deploy="Data-Driven Marketing">INQUIRE MODULE →</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- VIEW 2: PLANS (OPSPULSE-PILOT & OPSPULSE-STANDARD + Payment Methods & Included Services) -->
+        <div class="plans-grid hidden-view" id="plansViewGrid">
+          <!-- PLAN 1: OPSPULSE-PILOT -->
+          <article class="plan-card plan-pilot" data-plan="OPSPULSE-PILOT">
+            <div class="plan-top-bar">
+              <div>
+                <span class="plan-code">PLAN // 01 — INTRODUCTORY ONBOARDING</span>
+                <h3 class="plan-title">OPSPULSE-PILOT</h3>
+              </div>
+              <span class="plan-discount-pill">50% OFF FIRST 30 DAYS</span>
+            </div>
+
+            <div class="plan-price-row">
+              <div class="plan-price">₱4,500 <small>/ 30-Day Foundation Pilot</small></div>
+              <span class="plan-subnote">Reduces friction &amp; establishes verified baseline trust before ongoing retainer.</span>
+            </div>
+
+            <div class="plan-section-block">
+              <h4 class="plan-block-heading">// SERVICES INCLUDED (3-PHASE 30-DAY PROTOCOL)</h4>
+              <ul class="plan-feature-list">
+                <li><strong>Phase 1 (Landscape &amp; Intake):</strong> Study of operational landscape, direct costs, and workflows + deployment of low-friction, mobile-first daily digital intake (<em>"gold in, gold out"</em>).</li>
+                <li><strong>Phase 2 (Weekly Cross-Verification):</strong> Shadowing physical paper logs &amp; receipts, auditing input accuracy, weekly status reports, and introducing your <strong>Dedicated Handler</strong>.</li>
+                <li><strong>Phase 3 (Month-End Diagnostic Briefing):</strong> Formal executive briefing, visual dashboard delivery, 30–60 day forward forecast, and concrete action items.</li>
+              </ul>
+            </div>
+
+            <div class="plan-section-block payment-block">
+              <h4 class="plan-block-heading">// ACCEPTED PAYMENT METHODS &amp; TERMS</h4>
+              <div class="payment-chips">
+                <span class="pay-chip">GCash / Maya</span>
+                <span class="pay-chip">InstaPay / PESONet</span>
+                <span class="pay-chip">BDO / BPI / UnionBank Transfer</span>
+              </div>
+              <p class="payment-terms-note">Single 30-day pilot invoice (₱4,500) upon onboarding kickoff; seamlessly transitions into OPSPULSE-STANDARD in Month 2.</p>
+            </div>
+
+            <button class="plan-select-btn" data-select-plan="OPSPULSE-PILOT (₱4,500 / 30 Days)">SELECT OPSPULSE-PILOT (₱4,500) →</button>
+          </article>
+
+          <!-- PLAN 2: OPSPULSE-STANDARD -->
+          <article class="plan-card plan-standard" data-plan="OPSPULSE-STANDARD">
+            <div class="plan-top-bar">
+              <div>
+                <span class="plan-code">PLAN // 02 — MONTHLY RECURRING ADVISORY</span>
+                <h3 class="plan-title">OPSPULSE-STANDARD</h3>
+              </div>
+              <span class="plan-discount-pill badge-cyan-pill">FLAGSHIP RETAINER</span>
+            </div>
+
+            <div class="plan-price-row">
+              <div class="plan-price">₱9,000 <small>/ month (Standard Single-Location)</small></div>
+              <span class="plan-subnote">Baseline benchmark: ₱7,500–₱12,000/mo • Custom multi-branch tier available for growing MSMEs.</span>
+            </div>
+
+            <div class="plan-section-block">
+              <h4 class="plan-block-heading">// SERVICES INCLUDED (CONTINUOUS 3 PILLARS + SELECTIVE SUPPORT)</h4>
+              <ul class="plan-feature-list">
+                <li><strong>Pillar 1 — Structured Data Ledger:</strong> Ongoing digitization and auditing of daily paper logs, cash tallies, and receipts.</li>
+                <li><strong>Pillar 2 — Visual Dashboards &amp; 30–60d Forecasting:</strong> Rolling mathematical models for cash runway, direct costs, and inventory velocity.</li>
+                <li><strong>Pillar 3 — Monthly Strategy Briefings:</strong> Dedicated monthly handler sessions diagnosing financial leaks and guiding objective operational decisions.</li>
+                <li><strong>Selective Add-On Eligibility:</strong> Priority access to <em>Software Development &amp; Maintenance</em> integrations and <em>Data-Driven Marketing</em> campaigns.</li>
+              </ul>
+            </div>
+
+            <div class="plan-section-block payment-block">
+              <h4 class="plan-block-heading">// ACCEPTED PAYMENT METHODS &amp; TERMS</h4>
+              <div class="payment-chips">
+                <span class="pay-chip">Monthly Bank Transfer (BDO / BPI / UB)</span>
+                <span class="pay-chip">GCash / Maya Business</span>
+                <span class="pay-chip">Corporate Check / Official Invoice</span>
+              </div>
+              <p class="payment-terms-note">Billed monthly on a recurring advisory cycle. Flexible scaling for multi-branch operations.</p>
+            </div>
+
+            <button class="plan-select-btn btn-cyan" data-select-plan="OPSPULSE-STANDARD (₱9,000 / Month)">SELECT OPSPULSE-STANDARD (₱9,000/MO) →</button>
+          </article>
+        </div>
+
+        <!-- Interactive Command Drawer inside Services / Plans -->
+        <div class="service-inspector" id="serviceInspector">
+          <div class="inspector-status">
+            <span class="inspector-dot"></span>
+            <span id="inspectorText">ACTIVE VIEW: <strong>Services (Operational Intelligence, Software &amp; Maintenance, Marketing)</strong> — Switch to <strong>Plans</strong> to compare OPSPULSE-PILOT (₱4,500) and OPSPULSE-STANDARD (₱9,000/mo).</span>
+          </div>
+          <div class="inspector-actions">
+            <button class="inspector-cta" id="initConsultBtn">LAUNCH ₱4,500 OPSPULSE-PILOT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Modal Toast for Consultation / Diagnostics -->
+  <div class="cyber-toast" id="cyberToast" role="status" aria-live="polite" hidden>
+    <div class="toast-header">
+      <span>TRANSMISSION // TAN HAO OPS (PH)</span>
+      <button id="toastCloseBtn" aria-label="Close Notification">✕</button>
+    </div>
+    <div class="toast-body" id="toastBody">
+      Protocol initialized.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
